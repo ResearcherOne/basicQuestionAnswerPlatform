@@ -19,8 +19,9 @@ function getObjects() {
     success: function(data) {
       var htmlString = '';
       $.each(data.entryList, function(i, data){
+        var date = new Date(data.addedDate);
         htmlString += '<tr class="clickable-row" data-href="question.html?id='+data.entryId+'" style="cursor: pointer;">';
-        htmlString += '<td colspan="3"><a><strong>' + data.question + '</strong></a></td>';
+        htmlString += '<td colspan="3"><p class="date">' + date.customFormat('#DD#/#MM#/#YYYY# #hhhh#:#mm#:#ss#') + '</p><a><strong>' + data.question + '</strong></a></td>';
         //htmlString += '<td><a class="button thumbs_up" id="'+data.entryId+'" style="margin-bottom:0px">&#128077; '+data.thumbsup+'</a></td>';
         //htmlString += '<td><a class="button thumbs_down" id="'+data.entryId+'" style="margin-bottom:0px">&#128078; '+data.thumbsdown+'</a></td>';
         //htmlString += '<td>'+data.comments.length+' Answer'+(data.comments.length<=1?'':'s')+'</td>'

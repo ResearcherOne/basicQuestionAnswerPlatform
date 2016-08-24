@@ -57,9 +57,10 @@ function getObjects() {
               data.commentList.sort(compare);
 
               $.each(data.commentList, function(i, data){
+                var date = new Date(data.addedDate);
                 htmlString += '<tr>';
                 htmlString += '<td><strong>' + data.fullName + '</strong></td>';
-                htmlString += '<td colspan="2">'+data.comment+'</td>';
+                htmlString += '<td colspan="2"><p class="date">' + date.customFormat('#DD#/#MM#/#YYYY# #hhhh#:#mm#:#ss#') + '</p>'+data.comment+'</td>';
                 htmlString += '<td><a class="button comment_thumbs_up" id="'+data.commentId+"-"+id+'" style="margin-bottom:0px">&#128077; '+data.thumbsup+'</a></td>';
                 htmlString += '</tr>';
               });
