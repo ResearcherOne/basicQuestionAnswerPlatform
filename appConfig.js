@@ -1,9 +1,10 @@
+
 module.exports = {
-     mongoModule: {
+    mongoModule: {
 		'url': '',
 		questionCollectionName: "",
 		commentCollectionName: ""
 	},
-	applicationPort: 80,
+	applicationPort: 8000,
 	sessionSecret: ''
 }

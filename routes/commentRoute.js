@@ -15,7 +15,8 @@ router.route('/')
 			fullName: postedEntry.fullName,
 			comment: postedEntry.comment,
 			thumbsup: 0,
-			commentId: hash(postedEntry.fullName) + hash(postedEntry.comment)
+			commentId: hash(postedEntry.fullName) + hash(postedEntry.comment),
+			addedDate: new Date().getTime();
 		};
 		
 		mongoModule.addComment(entryId, comment, function(err, isSuccess){

@@ -12,7 +12,8 @@ router.route('/')
 		var newEntry = {
 			question: postedEntry.question,
 			thumbsup:0,
-			entryId: hash(postedEntry.question)
+			entryId: hash(postedEntry.question),
+			addedDate: new Date().getTime()
 		};
 		
 		var newCommentObject = {

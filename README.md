@@ -28,6 +28,7 @@
 			question:
 			thumbsup:
 			entryId:
+			addedDate:
 		}
 		
 		commentGroup:{
@@ -39,6 +40,7 @@
 					fullName:
 					comment:
 					thumbsup:
+					addedDate:
 				},
 			]
 		}
