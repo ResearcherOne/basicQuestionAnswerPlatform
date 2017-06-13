@@ -8,7 +8,10 @@ var getlist = require('./getlist');
 
 
 /*
+var appConfig = require('./appConfig');
+
 var authModule = require('../models/authModule.js');
+authModule.initializeModule(appConfig.redis);
 function stopFrequentActions(request, response, next){
 	if (typeof request.session.token !== 'undefined') {
 		var userSessionSavedToken = request.session.token;

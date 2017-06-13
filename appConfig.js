@@ -5,5 +5,8 @@ module.exports = {
 		commentCollectionName: ""
 	},
 	applicationPort: 80,
-	sessionSecret: ''
+	sessionSecret: '',
+	redis = {
+		password:""
+	}
 }

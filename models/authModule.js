@@ -1,10 +1,12 @@
 var tokenGenerator = require('rand-token').uid;
 var redisWrapper = require('./redisWrapper');
 
-redisWrapper.initialize(function(){
-	console.log("redis");
-});
 module.exports = {
+	initializeModule: function(options) {
+		redisWrapper.initialize(options, function(){
+        		console.log("redis");
+		});
+	},
 	generateToken: function(){
 		return tokenGenerator(16);
 	},

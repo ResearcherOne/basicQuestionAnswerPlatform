@@ -5,8 +5,8 @@ var errorCallback = null;
 var monitorCallback = null;
 
 module.exports = {
-	initialize: function(callback){
-		client = redis.createClient();
+	initialize: function(options, callback){
+		client = redis.createClient(options);
 
 		client.on("error", function (err) {
 			if(errorCallback !== null){
